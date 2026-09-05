@@ -1,43 +1,84 @@
+This repository contains the code, derived data, and paper source for the paper 'Internal Role Stability in Voynichese: Morphological Foundations and Multi-Transcription Controls.' The project studies internally stable role units in Voynichese. It does not propose a decipherment or translation.
+
 # Internal Role Stability in Voynichese
 
-This repository contains the publication package for the paper.
+Paper title: **Internal Role Stability in Voynichese: Morphological Foundations and Multi-Transcription Controls**
 
-The paper studies internal role stability in Voynichese. It does not claim decipherment, lexical translation, formal grammar, or semantics. The main contribution is a reproducible role layer based on morphology aware units, multiple transcription support, confound controls, independent induction support, and tokenization robustness checks.
+Repository: <https://github.com/ahaankallat/voynich-role-stability>
 
-## Current result
+## Summary
 
-The promoted reliable role layer covers 1,903 of 7,107 token occurrences, or 26.78 percent of the analyzed core. It appears in 812 of 1,709 lines, or 47.51 percent of the analyzed lines.
+This project studies whether written units in Voynichese keep stable internal roles after morphology-aware grouping, multiple transcription support, controls for manuscript metadata, independent induction checks, and tokenization robustness tests.
 
-The descriptive good but not reliable enough tier adds 272 token occurrences. It is included for transparency and future work, but it is not treated as promoted evidence. With this descriptive tier included, coverage reaches 2,175 token occurrences and 858 lines.
+The promoted reliable role layer covers 1,903 of 7,107 token occurrences, or 26.78 percent of the analyzed core. It appears in 812 of 1,709 lines, or 47.51 percent of analyzed lines. A descriptive "good but not reliable enough" tier is retained for transparency and future work, but it is not treated as promoted evidence.
 
-## Reliability tiers
+## Claims
 
-- Global reliable
-- Conditioned reliable
-- Environment sensitive reliable
-- Tokenization robust reliable
-- Good but not reliable enough
-- Low reliability or unassigned
+The project claims that some Voynichese units can be described as internally stable role units under the stated operational tests. The evidence is distributional and reproducible from the derived project tables included here.
 
-## Tokenization robustness
+The project does not claim decipherment, plaintext recovery, lexical translation, phonetic values, word meanings, parts of speech, formal grammar, or semantics.
 
-The final analysis does not assume that visible space tokenization is the only possible unit boundary. It checks whether candidate role units remain supported under surface token, morphology, broad shape, Stolfi inspired signature, edge, and boundary merge variants. A new unit is promoted only when it has both independent induction support and tokenization support.
+## Repository Structure
 
-## Key files
+- `paper/`: LaTeX paper source, BibTeX references, generated tables, and generated figures.
+- `scripts/`: Reproducible analysis and table/figure generation scripts.
+- `src/voynich_audit/`: Minimal Python package namespace for the project.
+- `data/processed/`: Derived tables used by the analysis and paper.
+- `data/README.md`: Data source and redistribution notes.
+- `docs/`: Method and data documentation.
+- `MANIFEST_SHA256.csv`: Checksums for the release contents.
 
-- `paper/main.tex`
-- `paper/references_manual.tex`
-- `scripts/run_role_stability_pipeline.py`
-- `scripts/make_tables_figures.py`
-- `data/processed/tokenization_robust_reliable_catalog.csv`
-- `data/processed/reliability_coverage_summary.csv`
-- `data/processed/occurrence_reliability_assignments.csv`
+## Reproduction
 
-## Reproduce
+Install dependencies with Python 3.10 or newer:
 
 ```bash
-python scripts/run_role_stability_pipeline.py
-python scripts/make_tables_figures.py
-cd paper
-latexmk -pdf main.tex
+python3 -m pip install -r requirements.txt
 ```
+
+Run the main analysis and regenerate tables and figures:
+
+```bash
+python3 scripts/run_role_stability_pipeline.py
+python3 scripts/make_tables_figures.py
+```
+
+The Makefile also provides focused targets:
+
+```bash
+make pass30
+make pass31
+make tables
+```
+
+## Compile the Paper
+
+From the repository root:
+
+```bash
+make paper
+```
+
+The paper compiles from `paper/main.tex` using `paper/references.bib`, `paper/tables/`, and `paper/figures/`.
+
+## Validate Checksums
+
+Validate the release manifest:
+
+```bash
+python3 scripts/validate_checksums.py
+```
+
+The manifest was regenerated for the final public repository contents after intentionally excluding compiled PDFs, LaTeX build products, temporary files, Python caches, and operating system metadata.
+
+## Citation
+
+Use the metadata in `CITATION.cff` when citing this repository. Suggested citation title:
+
+> Internal Role Stability in Voynichese: Morphological Foundations and Multi-Transcription Controls
+
+## Data Source and Licensing Note
+
+The repository includes derived project tables needed to reproduce the analyses in the paper. It does not package raw third-party transcription witnesses as newly redistributed source material. Review the licensing and attribution requirements for IVTFF, EVA, Takahashi, Currier, Zandbergen, Landini, and related transcription resources before redistributing raw transcription data.
+
+The manuscript is Beinecke MS 408 at Yale University Library.

@@ -7,7 +7,7 @@ import pandas as pd
 import gc
 
 ROOT = Path(__file__).resolve().parents[1]
-INPUT = ROOT / "data" / "input" / "voynich_pass26_core_token_occurrences_exploded.csv"
+INPUT = ROOT / "data" / "processed" / "voynich_pass26_core_token_occurrences_exploded.csv"
 OUT = ROOT / "data" / "processed"
 OUT.mkdir(parents=True, exist_ok=True)
 

@@ -4,15 +4,19 @@ from pathlib import Path
 import hashlib, csv, argparse
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'MANIFEST_SHA256.csv'
+SKIP_SUFFIXES={'.aux','.log','.out','.toc','.bbl','.blg','.fls','.fdb_latexmk','.tmp'}
+SKIP_NAMES={'.DS_Store','main.pdf'}
+SKIP_PARTS={'.git','__pycache__','.pytest_cache','build','dist'}
 def files():
     for p in ROOT.rglob('*'):
         if (
             p.is_file()
             and p != MANIFEST
-            and '.git' not in p.parts
-            and '__pycache__' not in p.parts
-            and p.name != '.DS_Store'
-            and p.suffix != '.tmp'
+            and not (SKIP_PARTS & set(p.parts))
+            and p.name not in SKIP_NAMES
+            and p.suffix not in SKIP_SUFFIXES
+            and not p.name.endswith('.synctex.gz')
+            and not any(part.endswith('.egg-info') for part in p.parts)
         ):
             yield p
 def sha(p):
@@ -28,7 +32,7 @@ def main():
     rows=[(str(p.relative_to(ROOT)),sha(p)) for p in sorted(files())]
     if args.write:
         with open(MANIFEST,'w',newline='') as f:
-            w=csv.writer(f)
+            w=csv.writer(f, lineterminator='\n')
             w.writerow(['path','sha256'])
             w.writerows(rows)
         print('wrote', MANIFEST)

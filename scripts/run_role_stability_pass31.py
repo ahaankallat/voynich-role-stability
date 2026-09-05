@@ -16,7 +16,7 @@ import run_role_stability_pass30 as p30
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "processed"
 OUT.mkdir(parents=True, exist_ok=True)
-INPUT = ROOT / "data" / "input" / "voynich_pass26_core_token_occurrences_exploded.csv"
+INPUT = ROOT / "data" / "processed" / "voynich_pass26_core_token_occurrences_exploded.csv"
 LENSES = p30.LENSES
 INDUCTION_K = [24, 32, 40, 50]
 

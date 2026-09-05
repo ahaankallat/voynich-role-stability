@@ -3,19 +3,19 @@
 all: pass30 pass31 tables
 
 pass30:
-	python scripts/run_role_stability_pass30.py
+	python3 scripts/run_role_stability_pass30.py
 
 pass31:
-	python scripts/run_role_stability_pass31.py
+	python3 scripts/run_role_stability_pass31.py
 
 tables:
-	python scripts/make_tables_figures_pass31.py
+	python3 scripts/make_tables_figures_pass31.py
 
 paper:
-	cd paper && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+	cd paper && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
 
 checksums:
-	python scripts/validate_checksums.py
+	python3 scripts/validate_checksums.py
 
 clean:
-	rm -f paper/*.aux paper/*.log paper/*.out paper/*.toc
+	rm -f paper/*.aux paper/*.bbl paper/*.blg paper/*.fdb_latexmk paper/*.fls paper/*.log paper/*.out paper/*.synctex.gz paper/*.toc paper/main.pdf

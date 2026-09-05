@@ -1,9 +1,8 @@
 catalog_level,lens,scope,role_unit_key,dominant_role,occurrences,distinct_lines,distinct_token_types,strata_total,section_count,induction_agree_count,induction_resolutions,top_tokens
-global_core_induction_supported,broad_shape,global,X|NONE,R06,46,46,5,15,7,3,4,"s, x, g, c, shs"
+global_core_induction_supported,broad_shape,global,X|NONE,R06,46,46,5,15,7,2,4,"s, x, g, c, shs"
 global_core_induction_supported,broad_shape,global,O|dy,R00,43,43,8,15,7,3,4,"chody, shody, otody, okody, qokody, qotody"
-global_core_induction_supported,broad_shape,global,X|y,R06,30,29,4,12,7,2,4,"shy, sy, osy, olsy"
 global_core_induction_supported,broad_shape,global,OG|y,R00,26,24,8,8,5,4,4,"choky, choty, otoky, chopy, shoky, oloky"
-global_core_induction_supported,conservative_morphology,global,o|dy|O,R00,41,41,6,15,7,2,4,"chody, shody, otody, okody, qokody, qotody"
+global_core_induction_supported,conservative_morphology,global,o|dy|O,R00,41,41,6,15,7,3,4,"chody, shody, otody, okody, qokody, qotody"
 global_core_induction_supported,stolfi_inspired_signature,global,NG|S_EY|T_y,R06,104,96,4,15,6,4,4,"chey, shey, ey, qey"
 global_core_induction_supported,stolfi_inspired_signature,global,NG|S_OEL|T_in,R06,93,82,9,15,7,4,4,"dain, sain, ain, shain, olain, oain"
 global_core_induction_supported,stolfi_inspired_signature,global,NG|S_EY|T_ey,R06,63,58,6,15,8,4,4,"sheey, cheey, qoeey, deey, oeey, oleey"
@@ -11,7 +10,7 @@ global_core_induction_supported,stolfi_inspired_signature,global,NG|S_X|T_NONE,R
 global_core_induction_supported,stolfi_inspired_signature,global,NG|S_BY|T_y,R00,33,32,9,10,7,3,4,"chy, olchy, dshy, dchy, ochy, orshy"
 global_core_induction_supported,stolfi_inspired_signature,global,NG|S_XY|T_y,R06,30,29,4,12,7,3,4,"shy, sy, osy, olsy"
 global_core_induction_supported,surface_token,global,ar,R06,58,52,1,15,7,4,4,ar
-global_core_induction_supported,surface_token,global,dar,R06,49,47,1,16,7,4,4,dar
+global_core_induction_supported,surface_token,global,dar,R06,49,47,1,16,7,3,4,dar
 global_core_induction_supported,surface_token,global,dain,R06,48,45,1,11,5,4,4,dain
 global_core_induction_supported,surface_token,global,or,R06,48,46,1,15,7,4,4,or
 global_core_induction_supported,surface_token,global,shey,R06,48,46,1,12,6,4,4,shey
@@ -19,7 +18,7 @@ global_core_induction_supported,surface_token,global,okaiin,R10,42,41,1,9,6,2,4,
 global_core_induction_supported,surface_token,global,s,R06,39,39,1,14,7,4,4,s
 global_core_induction_supported,surface_token,global,dal,R09,37,36,1,13,6,2,4,dal
 global_core_induction_supported,surface_token,global,okain,R10,36,34,1,9,6,2,4,okain
-global_core_induction_supported,surface_token,global,okal,R07,36,34,1,13,7,2,4,okal
+global_core_induction_supported,surface_token,global,okal,R07,36,34,1,13,7,3,4,okal
 global_core_induction_supported,surface_token,global,sheey,R06,29,28,1,10,7,4,4,sheey
 global_core_induction_supported,surface_token,global,y,R06,25,25,1,9,5,4,4,y
 section_local_supported,surface_token,section_H,daiin,R10,78,67,1,4,1,NA,NA,daiin

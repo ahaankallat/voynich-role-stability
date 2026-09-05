@@ -1,5 +1,5 @@
 lens,strict_supported,standard_supported,loose_supported,all_three_supported,standard_not_strict
 broad_shape,1,4,13,1,3
-conservative_morphology,0,1,4,0,1
+conservative_morphology,0,1,3,0,1
 stolfi_inspired_signature,1,8,15,1,7
 surface_token,7,16,32,7,9
