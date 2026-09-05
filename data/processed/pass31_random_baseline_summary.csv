@@ -1,0 +1,9 @@
+baseline,lens,mean,median,max,std
+global_role_shuffle,broad_shape,0.0,0.0,0,0.0
+global_role_shuffle,conservative_morphology,0.0,0.0,0,0.0
+global_role_shuffle,stolfi_inspired_signature,0.0,0.0,0,0.0
+global_role_shuffle,surface_token,0.0,0.0,0,0.0
+within_stratum_role_shuffle,broad_shape,0.08,0.0,1,0.29
+within_stratum_role_shuffle,conservative_morphology,0.0,0.0,0,0.0
+within_stratum_role_shuffle,stolfi_inspired_signature,0.0,0.0,0,0.0
+within_stratum_role_shuffle,surface_token,0.0,0.0,0,0.0

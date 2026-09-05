@@ -1,0 +1,29 @@
+lens,model,supported_count
+broad_shape,role stability only,7
+broad_shape,plus stratum consistency,7
+broad_shape,plus section spread,7
+broad_shape,plus Currier spread,6
+broad_shape,plus hand spread,7
+broad_shape,plus line marker spread,4
+broad_shape,full combined controls,4
+conservative_morphology,role stability only,2
+conservative_morphology,plus stratum consistency,2
+conservative_morphology,plus section spread,2
+conservative_morphology,plus Currier spread,2
+conservative_morphology,plus hand spread,2
+conservative_morphology,plus line marker spread,1
+conservative_morphology,full combined controls,1
+stolfi_inspired_signature,role stability only,10
+stolfi_inspired_signature,plus stratum consistency,10
+stolfi_inspired_signature,plus section spread,10
+stolfi_inspired_signature,plus Currier spread,9
+stolfi_inspired_signature,plus hand spread,10
+stolfi_inspired_signature,plus line marker spread,8
+stolfi_inspired_signature,full combined controls,8
+surface_token,role stability only,45
+surface_token,plus stratum consistency,45
+surface_token,plus section spread,45
+surface_token,plus Currier spread,37
+surface_token,plus hand spread,45
+surface_token,plus line marker spread,18
+surface_token,full combined controls,16

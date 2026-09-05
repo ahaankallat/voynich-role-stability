@@ -1,0 +1,9 @@
+basis,model,train_occurrences,test_occurrences,accuracy,balanced_accuracy,macro_f1,weighted_f1
+folio,majority_role_baseline,5335,1772,0.396,0.038,0.022,0.224
+folio,position_only,5335,1772,0.142,0.068,0.033,0.2
+folio,morphology_only,5335,1772,0.875,0.818,0.761,0.878
+folio,morphology_plus_context,5335,1772,0.88,0.788,0.745,0.88
+line,majority_role_baseline,4895,2212,0.387,0.042,0.023,0.216
+line,position_only,4895,2212,0.137,0.052,0.034,0.197
+line,morphology_only,4895,2212,0.897,0.915,0.856,0.901
+line,morphology_plus_context,4895,2212,0.886,0.8,0.738,0.887

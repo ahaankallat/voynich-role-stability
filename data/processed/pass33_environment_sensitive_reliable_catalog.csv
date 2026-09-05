@@ -1,0 +1,10 @@
+scope_name,scope_type,scope_value,lens,role_unit_key,dominant_role,occurrences,distinct_lines,distinct_token_types,dominant_role_share,section_count,currier_count,hand_count,marker_count,top_tokens,induction_votes,loose_induction_votes,mean_induction_match,mean_induction_cluster_purity,induction_detail,tier,new_occurrences_after_higher_tiers
+global,global,global,surface_token,ol,R06,73,66,1,1.0,6,3,5,4,ol,5,5,0.844,0.482,16:0.904/0.464 24:0.822/0.469 32:0.877/0.492 48:0.877/0.499 64:0.740/0.485,reliable_environment_sensitive,73
+global,global,global,surface_token,aiin,R06,57,51,1,1.0,7,3,5,4,aiin,5,5,0.825,0.52,16:0.895/0.457 24:0.754/0.476 32:0.702/0.458 48:0.930/0.477 64:0.842/0.732,reliable_environment_sensitive,57
+global,global,global,surface_token,chckhy,R00,41,39,1,1.0,5,2,3,1,chckhy,4,5,0.961,0.482,16:0.951/0.447 24:0.976/0.499 32:0.976/0.496 48:0.951/0.474 64:0.951/0.496,reliable_environment_sensitive,41
+global,global,global,surface_token,al,R06,31,28,1,1.0,5,3,5,3,al,5,5,0.787,0.469,16:0.871/0.455 24:0.742/0.463 32:0.871/0.476 48:0.806/0.473 64:0.645/0.478,reliable_environment_sensitive,31
+global,global,global,surface_token,oky,R00,29,29,1,1.0,8,3,5,7,oky,5,5,0.993,0.554,16:1.000/0.531 24:1.000/0.583 32:1.000/0.538 48:1.000/0.552 64:0.966/0.565,reliable_environment_sensitive,29
+global,global,global,surface_token,sheedy,R06,23,22,1,1.0,4,1,3,1,sheedy,5,5,0.913,0.469,16:1.000/0.458 24:0.826/0.481 32:0.957/0.459 48:0.870/0.471 64:0.913/0.476,reliable_environment_sensitive,23
+global,global,global,broad_shape,OXGX|y,R00,23,23,9,0.957,6,3,4,6,"chocthy, chockhy, shocthy, chocfhy, shockhy, okockhy, olockhy, dackhy",4,5,0.948,0.465,16:0.957/0.445 24:1.000/0.464 32:0.957/0.498 48:0.913/0.457 64:0.913/0.461,reliable_environment_sensitive,23
+global,global,global,surface_token,sho,R06,22,21,1,1.0,3,2,2,1,sho,5,5,0.891,0.505,16:1.000/0.506 24:0.818/0.517 32:0.818/0.506 48:0.909/0.495 64:0.909/0.500,reliable_environment_sensitive,22
+global,global,global,surface_token,saiin,R06,39,38,1,1.0,6,3,6,3,saiin,5,5,0.836,0.54,16:0.923/0.514 24:0.769/0.516 32:0.846/0.502 48:0.897/0.553 64:0.744/0.613,reliable_environment_sensitive,11

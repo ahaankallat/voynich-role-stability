@@ -1,0 +1,37 @@
+tier,scope_type,scope_value,lens,role_unit_key,dominant_role,occurrences,distinct_lines,distinct_token_types,strata_total,section_count,dominant_role_share,within_scope_purity,remaining_metadata_risk,induction_agree_count,induction_resolutions,new_occurrences_after_higher_tiers,top_tokens
+reliable_global,global,global,broad_shape,X|NONE,R06,46,46,5,15,7,,,,3.0,4.0,,"s, x, g, c, shs"
+reliable_global,global,global,broad_shape,O|dy,R00,43,43,8,15,7,,,,3.0,4.0,,"chody, shody, otody, okody, qokody, qotody"
+reliable_global,global,global,broad_shape,X|y,R06,30,29,4,12,7,,,,2.0,4.0,,"shy, sy, osy, olsy"
+reliable_global,global,global,broad_shape,OG|y,R00,26,24,8,8,5,,,,4.0,4.0,,"choky, choty, otoky, chopy, shoky, oloky"
+reliable_global,global,global,conservative_morphology,o|dy|O,R00,41,41,6,15,7,,,,2.0,4.0,,"chody, shody, otody, okody, qokody, qotody"
+reliable_global,global,global,stolfi_inspired_signature,NG|S_EY|T_y,R06,104,96,4,15,6,,,,4.0,4.0,,"chey, shey, ey, qey"
+reliable_global,global,global,stolfi_inspired_signature,NG|S_OEL|T_in,R06,93,82,9,15,7,,,,4.0,4.0,,"dain, sain, ain, shain, olain, oain"
+reliable_global,global,global,stolfi_inspired_signature,NG|S_EY|T_ey,R06,63,58,6,15,8,,,,4.0,4.0,,"sheey, cheey, qoeey, deey, oeey, oleey"
+reliable_global,global,global,stolfi_inspired_signature,NG|S_X|T_NONE,R06,46,46,5,15,7,,,,2.0,4.0,,"s, x, g, c, shs"
+reliable_global,global,global,stolfi_inspired_signature,NG|S_BY|T_y,R00,33,32,9,10,7,,,,3.0,4.0,,"chy, olchy, dshy, dchy, ochy, orshy"
+reliable_global,global,global,stolfi_inspired_signature,NG|S_XY|T_y,R06,30,29,4,12,7,,,,3.0,4.0,,"shy, sy, osy, olsy"
+reliable_global,global,global,surface_token,ar,R06,58,52,1,15,7,,,,4.0,4.0,,ar
+reliable_global,global,global,surface_token,dar,R06,49,47,1,16,7,,,,4.0,4.0,,dar
+reliable_global,global,global,surface_token,dain,R06,48,45,1,11,5,,,,4.0,4.0,,dain
+reliable_global,global,global,surface_token,or,R06,48,46,1,15,7,,,,4.0,4.0,,or
+reliable_global,global,global,surface_token,shey,R06,48,46,1,12,6,,,,4.0,4.0,,shey
+reliable_global,global,global,surface_token,okaiin,R10,42,41,1,9,6,,,,2.0,4.0,,okaiin
+reliable_global,global,global,surface_token,s,R06,39,39,1,14,7,,,,4.0,4.0,,s
+reliable_global,global,global,surface_token,dal,R09,37,36,1,13,6,,,,2.0,4.0,,dal
+reliable_global,global,global,surface_token,okain,R10,36,34,1,9,6,,,,2.0,4.0,,okain
+reliable_global,global,global,surface_token,okal,R07,36,34,1,13,7,,,,2.0,4.0,,okal
+reliable_global,global,global,surface_token,sheey,R06,29,28,1,10,7,,,,4.0,4.0,,sheey
+reliable_global,global,global,surface_token,y,R06,25,25,1,9,5,,,,4.0,4.0,,y
+reliable_conditioned,meta_L,B,surface_token,shedy,R06,95,83,1,11,5,1.0,1.0,0.947,,,95.0,shedy
+reliable_conditioned,meta_L,B,surface_token,chedy,R02,94,82,1,9,4,1.0,1.0,0.957,,,94.0,chedy
+reliable_conditioned,meta_L,B,surface_token,qokedy,H12,89,73,1,11,5,1.0,1.0,0.966,,,89.0,qokedy
+reliable_conditioned,meta_L,A,surface_token,daiin,R10,81,69,1,5,3,1.0,1.0,0.963,,,81.0,daiin
+reliable_conditioned,meta_L,B,surface_token,qokeey,H08,66,56,1,7,5,1.0,1.0,0.939,,,66.0,qokeey
+reliable_conditioned,meta_L,B,broad_shape,LB|edy,R00,44,42,6,6,4,1.0,1.0,0.955,,,44.0,"lchedy, lshedy, qolchedy, rchedy, qorchedy, rshedy"
+reliable_conditioned,meta_L,B,surface_token,qokaiin,H08,37,36,1,7,5,1.0,1.0,0.946,,,37.0,qokaiin
+reliable_conditioned,meta_L,B,surface_token,okedy,R00,33,29,1,7,5,1.0,1.0,0.909,,,33.0,okedy
+reliable_conditioned,meta_L,B,surface_token,okeedy,R00,32,30,1,4,3,1.0,1.0,0.938,,,32.0,okeedy
+reliable_conditioned,meta_L,B,surface_token,otedy,R01,30,28,1,6,4,1.0,1.0,0.933,,,30.0,otedy
+reliable_conditioned,meta_L,B,surface_token,saiin,R06,28,28,1,6,4,1.0,1.0,0.964,,,28.0,saiin
+reliable_conditioned,meta_L,B,surface_token,qokar,R03,26,24,1,6,4,1.0,1.0,0.962,,,26.0,qokar
+reliable_conditioned,meta_L,B,surface_token,chdy,R02,25,24,1,9,5,1.0,1.0,0.96,,,25.0,chdy

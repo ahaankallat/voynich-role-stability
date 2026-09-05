@@ -1,0 +1,9 @@
+tier,lens,full_supported_units,seen_in_tier,same_dominant_role,supported_loose_in_tier,supported_standard_in_tier
+S1_MULTI_TRANSCRIPTION_STRICT_CORE,broad_shape,4,4,4,4,2
+S1_MULTI_TRANSCRIPTION_STRICT_CORE,conservative_morphology,1,1,1,1,1
+S1_MULTI_TRANSCRIPTION_STRICT_CORE,stolfi_inspired_signature,8,8,8,5,3
+S1_MULTI_TRANSCRIPTION_STRICT_CORE,surface_token,16,16,16,14,7
+S2_STRONG_BUT_PARTIAL_TRANSCRIPTION_CORE,broad_shape,4,4,4,0,0
+S2_STRONG_BUT_PARTIAL_TRANSCRIPTION_CORE,conservative_morphology,1,1,1,0,0
+S2_STRONG_BUT_PARTIAL_TRANSCRIPTION_CORE,stolfi_inspired_signature,8,8,8,4,2
+S2_STRONG_BUT_PARTIAL_TRANSCRIPTION_CORE,surface_token,16,16,16,2,0

@@ -1,0 +1,6 @@
+tier,units
+reliable_global,23
+reliable_conditioned,13
+reliable_environment_sensitive,9
+reliable_tokenization_robust,9
+good_but_not_reliable_enough,46

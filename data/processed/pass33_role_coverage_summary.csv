@@ -1,0 +1,20 @@
+tier,role,token_occurrences,token_coverage_pct,lines_touched,top_tokens
+reliable_global,R00,102,1.44,95,"chy, chody, choky, shody, okody, choty, otody, qokody"
+reliable_global,R06,516,7.26,381,"ar, chey, dar, shey, or, dain, s, sheey"
+reliable_global,R07,36,0.51,34,okal
+reliable_global,R09,37,0.52,36,dal
+reliable_global,R10,78,1.1,72,"okaiin, okain"
+reliable_conditioned,H08,103,1.45,88,"qokeey, qokaiin"
+reliable_conditioned,H12,89,1.25,73,qokedy
+reliable_conditioned,R00,109,1.53,97,"okedy, okeedy, lchedy, lshedy, qolchedy, rchedy, qorchedy, rshedy"
+reliable_conditioned,R01,30,0.42,28,otedy
+reliable_conditioned,R02,119,1.67,103,"chedy, chdy"
+reliable_conditioned,R03,26,0.37,24,qokar
+reliable_conditioned,R06,123,1.73,104,"shedy, saiin"
+reliable_conditioned,R10,81,1.14,69,daiin
+reliable_environment_sensitive,R00,93,1.31,87,"chckhy, oky, chocthy, chockhy, shocthy, chocfhy, shockhy, olockhy"
+reliable_environment_sensitive,R06,217,3.05,178,"ol, aiin, al, sheedy, sho, saiin"
+good_but_not_reliable_enough,H08,23,0.32,21,qokal
+good_but_not_reliable_enough,R00,136,1.91,128,"o, lor, lkeey, checkhy, chos, okeody, ckhy, lkeeey"
+good_but_not_reliable_enough,R06,123,1.73,108,"dol, dam, sheol, sol, oly, l, sar, sor"
+good_but_not_reliable_enough,R10,53,0.75,47,daiin

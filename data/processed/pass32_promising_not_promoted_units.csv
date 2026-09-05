@@ -1,0 +1,55 @@
+tier,scope_type,scope_value,lens,role_unit_key,dominant_role,occurrences,distinct_lines,distinct_token_types,strata_total,section_count,dominant_role_share,within_scope_purity,remaining_metadata_risk,new_occurrences_after_higher_tiers,top_tokens,reason_not_promoted
+promising_not_promoted,global_candidate,not_promoted,surface_token,chol,R07,96,83,1,14,7,1.0,1.0,0.979,96,chol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qokeedy,H01,85,70,1,8,5,1.0,1.0,1.0,85,qokeedy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,ol,R06,73,66,1,11,6,1.0,1.0,0.959,73,ol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,aiin,R06,57,51,1,13,7,1.0,1.0,0.93,57,aiin,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qokain,H08,57,54,1,4,3,1.0,1.0,1.0,57,qokain,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,chor,R11,48,47,1,11,5,1.0,1.0,0.854,48,chor,not independently promoted
+promising_not_promoted,global_candidate,not_promoted,surface_token,qoky,H01,43,42,1,10,5,1.0,1.0,0.977,43,qoky,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,chckhy,R00,41,39,1,6,5,1.0,1.0,1.0,41,chckhy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,okeey,R06,37,36,1,12,7,1.0,1.0,0.757,37,okeey,not independently promoted
+promising_not_promoted,global_candidate,not_promoted,surface_token,qokal,H08,37,35,1,8,5,1.0,1.0,1.0,37,qokal,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,al,R06,31,28,1,9,5,1.0,1.0,0.935,31,al,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,dy,R02,30,30,1,8,6,1.0,1.0,0.967,30,dy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,oky,R00,29,29,1,14,8,1.0,1.0,0.621,29,oky,threshold sensitive
+promising_not_promoted,global_candidate,not_promoted,stolfi_inspired_signature,G_k|S_EGY|T_y,R06,28,28,4,12,6,0.929,0.929,0.893,28,"cheky, sheky, sheeky, cheeky",threshold sensitive
+promising_not_promoted,global_candidate,not_promoted,surface_token,okar,R03,27,26,1,10,6,1.0,1.0,0.778,27,okar,threshold sensitive
+promising_not_promoted,global_candidate,not_promoted,surface_token,cheol,R00,25,24,1,10,6,1.0,1.0,0.92,25,cheol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,otain,R00,25,24,1,6,5,1.0,1.0,0.96,25,otain,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qokey,H08,25,25,1,9,6,1.0,1.0,1.0,25,qokey,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qoteedy,H01,25,23,1,5,4,1.0,1.0,1.0,25,qoteedy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,broad_shape,EXGX|y,R00,25,25,8,8,6,0.96,1.0,0.92,25,"checkhy, checthy, sheckhy, shecthy, eeckhy, cheecthy",fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,broad_shape,XO|NONE,R06,24,23,2,5,4,0.917,0.958,0.958,24,"sho, chso",fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,stolfi_inspired_signature,NG|S_XO|T_NONE,R06,24,23,2,5,4,0.917,0.958,0.958,24,"sho, chso",fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,okol,R07,23,22,1,11,6,1.0,1.0,0.652,23,okol,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,otaiin,R10,23,22,1,6,5,1.0,1.0,0.87,23,otaiin,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,qol,R00,23,21,1,4,3,1.0,1.0,1.0,23,qol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,sheedy,R06,23,22,1,5,4,1.0,1.0,1.0,23,sheedy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,broad_shape,OXGX|y,R00,23,23,9,12,6,0.957,0.957,0.739,23,"chocthy, chockhy, shocthy, chocfhy, dackhy, otacphy",fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,qotedy,H17,22,20,1,5,3,1.0,1.0,1.0,22,qotedy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,sho,R06,22,21,1,4,3,1.0,1.0,1.0,22,sho,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,conservative_morphology,ek|y|EG,R06,22,22,2,11,6,1.0,1.0,0.864,22,"cheky, sheky",fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,shol,R08,21,17,1,8,5,1.0,1.0,0.905,21,shol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qokol,H08,20,18,1,8,6,1.0,1.0,0.95,20,qokol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,broad_shape,OX|NONE,R00,20,19,10,13,7,0.9,1.0,0.7,20,"chos, os, okos, as, qoos, olos",fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,dol,R06,19,18,1,3,3,1.0,1.0,1.0,19,dol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,cthol,R07,18,18,1,4,4,1.0,1.0,1.0,18,cthol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,dam,R06,18,18,1,11,6,1.0,1.0,0.778,18,dam,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,broad_shape,O|NONE,R00,18,18,3,11,8,1.0,1.0,0.444,18,"o, a, oa",fails global standard status
+promising_not_promoted,global_candidate,not_promoted,stolfi_inspired_signature,NG|S_O|T_NONE,R00,18,18,3,11,8,1.0,1.0,0.444,18,"o, a, oa",fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,cheody,R00,17,17,1,10,5,1.0,1.0,0.824,17,cheody,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,sheol,R06,17,17,1,6,6,1.0,1.0,0.824,17,sheol,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,stolfi_inspired_signature,G_k|S_LGEY|T_eey,R00,17,15,4,3,2,0.941,0.941,1.0,17,"lkeey, lkeeey, qolkeey, rkeey",fails global standard status; metadata concentration; section spread too narrow
+promising_not_promoted,global_candidate,not_promoted,surface_token,chcthy,R04,16,15,1,4,4,1.0,1.0,1.0,16,chcthy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qokchdy,H09,16,13,1,7,5,1.0,1.0,0.938,16,qokchdy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qoty,H01,16,16,1,8,5,1.0,1.0,0.938,16,qoty,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,broad_shape,L|or,R00,16,16,4,5,4,1.0,1.0,1.0,16,"lor, ror, chlor, lror",fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,stolfi_inspired_signature,NG|S_LOL|T_or,R00,16,16,4,5,4,1.0,1.0,1.0,16,"lor, ror, chlor, lror",fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,cheky,R06,15,15,1,9,6,1.0,1.0,0.867,15,cheky,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,cthy,R04,15,15,1,2,1,1.0,1.0,1.0,15,cthy,fails global standard status; metadata concentration; section spread too narrow
+promising_not_promoted,global_candidate,not_promoted,surface_token,l,R06,15,15,1,7,5,1.0,1.0,0.8,15,l,fails global standard status
+promising_not_promoted,global_candidate,not_promoted,surface_token,oly,R06,15,15,1,7,5,1.0,1.0,0.933,15,oly,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,oteedy,R01,15,15,1,4,4,1.0,1.0,1.0,15,oteedy,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,qotain,H13,15,14,1,4,3,1.0,1.0,1.0,15,qotain,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,surface_token,sol,R06,15,15,1,6,5,1.0,1.0,0.933,15,sol,fails global standard status; metadata concentration
+promising_not_promoted,global_candidate,not_promoted,conservative_morphology,os|NONE|OX,R00,15,14,6,10,5,0.933,1.0,0.667,15,"chos, os, okos, qoos, olos, otos",fails global standard status

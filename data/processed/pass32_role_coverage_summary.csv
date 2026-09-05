@@ -1,0 +1,29 @@
+tier,role,token_occurrences,token_coverage_pct,lines_touched,top_tokens
+promising_not_promoted,R06,372,5.23,287,"ol, aiin, okeey, al, sheedy, sho, dol, dam"
+promising_not_promoted,R00,279,3.93,242,"chckhy, oky, cheol, otain, qol, cheody, o, lor"
+promising_not_promoted,H01,169,2.38,130,"qokeedy, qoky, qoteedy, qoty"
+promising_not_promoted,H08,139,1.96,122,"qokain, qokal, qokey, qokol"
+promising_not_promoted,R07,137,1.93,114,"chol, okol, cthol"
+promising_not_promoted,R11,48,0.68,47,chor
+promising_not_promoted,R04,31,0.44,30,"chcthy, cthy"
+promising_not_promoted,R02,30,0.42,30,dy
+promising_not_promoted,R03,27,0.38,26,okar
+promising_not_promoted,R10,23,0.32,22,otaiin
+promising_not_promoted,H17,22,0.31,20,qotedy
+promising_not_promoted,R08,21,0.3,17,shol
+promising_not_promoted,H09,16,0.23,13,qokchdy
+promising_not_promoted,H13,15,0.21,14,qotain
+promising_not_promoted,R01,15,0.21,15,oteedy
+reliable_conditioned,R06,123,1.73,104,"shedy, saiin"
+reliable_conditioned,R02,119,1.67,103,"chedy, chdy"
+reliable_conditioned,R00,109,1.53,97,"okedy, okeedy, lchedy, lshedy, qolchedy, rchedy, qorchedy, rshedy"
+reliable_conditioned,H08,103,1.45,88,"qokeey, qokaiin"
+reliable_conditioned,H12,89,1.25,73,qokedy
+reliable_conditioned,R10,81,1.14,69,daiin
+reliable_conditioned,R01,30,0.42,28,otedy
+reliable_conditioned,R03,26,0.37,24,qokar
+reliable_global,R06,516,7.26,381,"ar, chey, dar, shey, or, dain, s, sheey"
+reliable_global,R00,102,1.44,95,"chy, chody, choky, shody, okody, choty, otody, qokody"
+reliable_global,R10,78,1.1,72,"okaiin, okain"
+reliable_global,R09,37,0.52,36,dal
+reliable_global,R07,36,0.51,34,okal

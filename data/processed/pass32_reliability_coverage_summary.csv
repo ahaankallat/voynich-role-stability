@@ -1,0 +1,5 @@
+tier,token_occurrences,token_coverage_pct,lines_touched,line_coverage_pct,cumulative_token_occurrences,cumulative_token_coverage_pct,cumulative_lines_touched,cumulative_line_coverage_pct
+reliable_global,769,10.82,509,29.78,769,10.82,509,29.78
+reliable_conditioned,680,9.57,382,22.35,1449,20.39,693,40.55
+promising_not_promoted,1344,18.91,675,39.5,2793,39.3,881,51.55
+low_reliability_or_unassigned,4314,60.7,1598,93.5,7107,100.0,1709,100.0

@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{tabularx}
+\setlist{nosep}
+\sloppy
+
+\title{Internal Role Stability in Voynichese\\\large Morphological Foundations and Multi Transcription Controls}
+\author{Ahaan Kallat\\
+Khoury College of Computer Sciences\\
+Northeastern University\\
+Boston, MA, USA\\
+\texttt{kallat.a@northeastern.edu}}
+\date{August 31, 2026}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+This paper studies internal role stability in the Voynich Manuscript without proposing decipherment, plaintext language, or translation. The analysis stops at the role layer. It asks whether written units in Voynichese keep stable internal roles after morphology aware grouping, multiple transcription support, controls for section or illustration code, Currier like class, hand like class, and line marker family, and sensitivity checks over tokenization assumptions. The evidence base is a multi transcription supported core of 1,709 lines and 7,107 token occurrences. The paper builds role test units from surface tokens, conservative morphology units, broad shape units, Stolfi inspired signatures, edge signatures, and boundary merge variants. It tests role stability with threshold sensitivity, ablation tests, random role baselines, held out validation, transcription tier checks, section level profiling, independent cluster induction, predictive held out validation, and tokenization robustness. The final reporting layer contains 23 globally reliable role units, 13 conditioned reliable role units, 9 environment sensitive reliable role units, and 9 tokenization robust reliable role units. The promoted reliable layer covers 1,903 of 7,107 token occurrences, or 26.8 percent of the analyzed core, and appears in 812 of 1,709 lines, or 47.5 percent of analyzed lines. A further good but not reliable enough layer covers 272 additional token occurrences. With this descriptive layer included, coverage reaches 2,175 token occurrences and 858 lines. These are internal distributional objects. They are not word meanings, parts of speech, formal grammar rules, or semantic claims.
+\end{abstract}
+
+\noindent\textbf{Keywords} Voynich Manuscript, Voynichese, undeciphered scripts, computational linguistics, morphology, role structure, transcription robustness, confound control, digital humanities.
+
+\section{Introduction}
+
+The Voynich Manuscript is an illustrated codex written in an undeciphered script and preserved as Beinecke MS 408 at Yale University Library \cite{yale_ms408}. Voynichese has long been known to have non random statistical structure. It also has major confounds. These include section, Currier variety, scribal hand, layout, line position, and uncertainty about what visible spaces mean \cite{currier_1976,bowern_lindemann_2021}. A role study must therefore avoid a simple error. It must not treat frequency, location, or word shape as proof of grammar.
+
+This paper addresses that problem at the role layer. A role is not a meaning. A role is not a part of speech. A role is an internal distributional label assigned by earlier internal annotation work and then tested here for stability. The paper asks which written units behave as stable role units after the main known confounds are treated as controls.
+
+The contribution is a maximal reliable catalog under the current data constraints. The word maximal does not mean complete. It means that the paper reports every unit that can be promoted under the stated rules, and also reports good but unpromoted units separately. A unit may be globally reliable, conditioned reliable, or environment sensitive reliable. The first class is portable across controls. The second class is reliable inside a stated manuscript environment. The third class is role stable and independently supported, but too concentrated in one environment to be called portable. This policy accepts that role behavior can be local without treating every local pattern as reliable.
+
+The paper makes six contributions. First, it states the transcription and unit assumptions that support the analysis. Second, it uses prior Voynich word structure work as the morphology foundation for role test units. Third, it evaluates stability under sensitivity tests, ablations, random baselines, held out validation, transcription tier checks, and section profiles. Fourth, it adds independent cluster induction and held out role prediction as tests of whether the role layer can be recovered from morphology and context. Fifth, it separates reliable, good but not reliable enough, and low reliability material so that coverage can expand without weakening the main claim. Sixth, it tests whether promoted role units remain supported when visible spaces are not treated as the only possible unit boundary.
+
+\section{Layer boundary}
+
+The paper covers the layers shown in Table~\ref{tablayer}. Formal grammar and semantics are outside the claim. Formal grammar would test ordered rules, inversions, terminal behavior, mode switching, and cross domain constraints. Semantics would require external anchors from images, layout, diagrams, repeated manuscript contexts, or medieval technical traditions.
+
+\begin{table}[H]
+\centering
+\caption{Layer boundary for the present paper}
+\label{tablayer}
+\input{tables/layer_boundary.tex}
+\end{table}
+
+This boundary is necessary because role stability is a weaker claim than grammar. A unit may keep the same internal role across contexts without being a noun, verb, operator, quantifier, or semantic action. The present paper keeps those labels out of the evidentiary claim.
+
+\section{Related work}
+
+Currier identified large scale textual differences that later work treats as major structural varieties \cite{currier_1976}. IVTFF and related transcription work provide the multi witness setting in which different machine readable versions can be compared \cite{zandbergen_transcription}. Stolfi developed detailed models of Voynichese word structure, including prefix, midfix, suffix analysis and later word grammar work \cite{stolfi_pms_1997,stolfi_word_grammar_2000}. Computational studies have examined statistical structure, entropy, co occurrence patterns, and topic structure \cite{reddy_knight_2011,montemurro_zanette_2013,sterneck_topic_2021}. Bowern and Lindemann summarize the linguistic state of the field and emphasize that the manuscript remains undeciphered \cite{bowern_lindemann_2021}. Recent work also cautions that glyphs, tokens, and spaces should not be treated as ordinary letters, words, and spaces without argument \cite{parisel_units_2026}.
+
+Table~\ref{tabprior} positions the present paper against these prior layers. The goal is not to replace word grammar, transcription work, or entropy work. The goal is to use them as constraints on a narrower role stability question.
+
+\begin{table}[H]
+\centering
+\caption{Relationship to prior structural work}
+\label{tabprior}
+\resizebox{\linewidth}{!}{\input{tables/prior_work_comparison.tex}}
+\end{table}
+
+\section{Evidence base}
+
+The working input is a line level Voynich transcription table produced by the project migration package. It contains 5,376 line records. The primary analysis uses the S1 plus S2 core of 1,709 lines. The expanded token occurrence table contains 7,107 token occurrences across 2,597 surface token types.
+
+Table~\ref{tabtranscription} states how transcription evidence is used. The paper does not package raw third party transcription witnesses as new source material. It uses derived project tables and records the external transcription infrastructure as an evidence assumption. This avoids treating a single transcription stream as final.
+
+\begin{table}[H]
+\centering
+\caption{Transcription assumptions}
+\label{tabtranscription}
+\resizebox{\linewidth}{!}{\input{tables/transcription_assumptions.tex}}
+\end{table}
+
+Each token occurrence retains locus, folio, line order, token position, token string, internal role, module label, section or illustration code, Currier like class, hand like class, line marker family, and transcription support tier. The combined control stratum is the four field tuple made from section or illustration code, Currier like class, hand like class, and line marker family.
+
+\section{Morphology foundation}
+
+Role analysis should not begin with uninterpreted strings alone. Voynichese word forms have strong internal constraints, and prior work has modeled those constraints at the word grammar layer \cite{stolfi_word_grammar_2000}. The present paper therefore builds four role test lenses. These lenses are not claimed to be a complete morphology of Voynichese. They are operational ways to test whether role stability is visible at different unit granularities.
+
+\begin{table}[H]
+\centering
+\caption{Role test lenses}
+\label{tabmorph}
+\resizebox{\linewidth}{!}{\input{tables/morphology_lenses.tex}}
+\end{table}
+
+The conservative morphology lens groups tokens by limited frame material, body, terminal class, and reduced body shape. The broad shape lens groups reduced body shape and terminal class. The Stolfi inspired signature lens groups gallows pattern, reduced remainder shape, and terminal class. These lenses connect role testing to known word internal structure while avoiding a claim that the exact historical morphology is solved.
+
+\section{Internal role layer}
+
+The role labels tested in this paper were produced by earlier internal annotation work. That annotation work clustered token behavior by local context, line position, recurrence, and module structure. This paper does not ask the reader to accept those labels as semantic categories. It tests whether the labels behave as reproducible internal variables.
+
+For each unit under each lens, the analysis computes total occurrences, distinct lines, distinct token types, dominant internal role, dominant role share, normalized role entropy, weighted within stratum role purity, agreement between local stratum majority role and global dominant role, number of combined strata, number of section or illustration codes, metadata concentration values, and maximum metadata concentration risk.
+
+A unit is called role stable across confounds under the standard threshold only when it has enough frequency, enough line support, high dominant role share, high within stratum role purity, high stratum majority agreement, adequate spread across strata, adequate spread across sections, and low maximum metadata concentration risk. For morphology based lenses, at least two surface token types are required. This prevents a family result from merely restating one surface token.
+
+\section{Evaluation design}
+
+The evaluation is designed around skeptical alternatives. A stable unit could be a frequency artifact. It could be a line position artifact. It could be section, Currier, hand, morphology, or threshold choice. Threshold sensitivity means that the analysis is rerun under strict, standard, and loose promotion cutoffs. If a unit appears only at one cutoff, it is treated with more caution.
+
+The paper uses eight tests. First, threshold sensitivity compares strict, standard, and loose criteria. Second, ablation tests show how many candidates survive when controls are added. Third, random role shuffle baselines test whether stable units appear after role labels are destroyed globally or within control strata. Fourth, held out validation defines units on development data and tests whether the same dominant role appears in held out folios or lines. Fifth, transcription tier robustness checks whether the full supported units are seen and role consistent in the S1 and S2 evidence tiers. Sixth, independent cluster induction groups units from morphology and context features without using role labels as input features. Seventh, predictive validation asks how well held out role labels can be recovered from morphology and context features without using manuscript section, Currier class, hand class, or line marker family as input features. Eighth, tokenization robustness tests whether the same role support appears under surface token, morphology, shape, edge, and boundary merge variants.
+
+These tests do not prove grammar or meaning. They ask whether the role layer is strong enough to be a reproducible object for later grammar work.
+
+\section{Core role stability results}
+
+Table~\ref{tabstatus} gives the standard threshold counts. The surface token lens yields 16 role stable units. The conservative morphology lens yields 1. The broad shape lens yields 4. The Stolfi inspired signature lens yields 8. The morphology based counts are smaller because each supported family must contain more than one surface type and must survive the same portability requirements.
+
+\begin{table}[H]
+\centering
+\caption{Standard role stability counts by lens}
+\label{tabstatus}
+\input{tables/status_counts_by_lens.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth]{figures/stable_units_by_lens.png}
+\caption{Stable role units by lens}
+\label{figstable}
+\end{figure}
+
+Table~\ref{tabsensitivity} shows that the result is threshold sensitive, but not threshold arbitrary. The strict threshold retains a smaller core. The loose threshold adds a wider candidate set. The all threshold core is small, which is expected for an undeciphered manuscript with uncertain units.
+
+\begin{table}[H]
+\centering
+\caption{Threshold sensitivity}
+\label{tabsensitivity}
+\input{tables/sensitivity_counts.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/threshold_sensitivity.png}
+\caption{Strict, standard, and loose threshold comparison}
+\label{figthreshold}
+\end{figure}
+
+Table~\ref{tabablation} is the main control table. It shows that many candidates satisfy a role only criterion, but fewer survive line marker and full combined controls. This pattern supports the narrow claim that the final stable set is not only a frequency or role purity list.
+
+\begin{table}[H]
+\centering
+\caption{Ablation counts under the standard threshold}
+\label{tabablation}
+\input{tables/ablation_counts.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/ablation_counts.png}
+\caption{Effect of selected controls on supported units}
+\label{figablation}
+\end{figure}
+
+\section{Baseline and held out validation}
+
+Table~\ref{tabbaseline} reports random role baselines. The global role shuffle baseline recovers no stable units. The within stratum shuffle baseline recovers almost none, with a maximum of one broad shape unit across the runs. This indicates that the observed stable role units depend on the actual alignment between units and roles.
+
+\begin{table}[H]
+\centering
+\caption{Random role shuffle baselines}
+\label{tabbaseline}
+\input{tables/baseline_summary.tex}
+\end{table}
+
+Table~\ref{tabheldout} reports held out validation. Units supported on development data are usually seen in held out data when they have enough coverage, and every seen development supported unit preserves the same dominant role. The retention column is more conservative because held out subsets are smaller and therefore must satisfy loose held out thresholds.
+
+\begin{table}[H]
+\centering
+\caption{Held out validation}
+\label{tabheldout}
+\input{tables/heldout_summary.tex}
+\end{table}
+
+Table~\ref{tabtier} reports transcription tier robustness. Every full supported unit is seen in both the S1 and S2 tiers and keeps the same dominant role when seen. Standard tier support is strongest in S1. S2 is smaller and therefore retains fewer units under frequency thresholds, but it still preserves dominant role identity for the supported units that appear there.
+
+\begin{table}[H]
+\centering
+\caption{Transcription tier robustness}
+\label{tabtier}
+\input{tables/tier_robustness.tex}
+\end{table}
+
+\section{Independent role recovery}
+
+The independent induction stage adds two tests aimed at the strongest remaining objection. The objection is that the previous results might only restate the upstream role annotation layer. The first test clusters role test units from morphology and context features without using old role labels as features. After clustering, the old role labels are used only for evaluation. Table~\ref{tabinduction} shows the number of standard role stable units whose induced cluster agrees with the audited role in a majority of four cluster resolutions.
+
+\begin{table}[H]
+\centering
+\caption{Independent induction agreement}
+\label{tabinduction}
+\input{tables/induction_votes.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/induction_agreement.png}
+\caption{Agreement between induced clusters and audited roles}
+\label{figinduction}
+\end{figure}
+
+The second test is predictive rather than clustering based. It trains on one subset and predicts held out role labels using morphology and context features. It does not include section, Currier like class, hand like class, or line marker family as input features. Table~\ref{tabpredict} shows that morphology and context substantially outperform majority and position only baselines. This does not prove that the roles are linguistic categories. It does show that the role layer is recoverable from written form and local context rather than only from manuscript metadata.
+
+\begin{table}[H]
+\centering
+\caption{Held out role prediction}
+\label{tabpredict}
+\input{tables/predictive_validation.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/predictive_validation.png}
+\caption{Held out role prediction by feature set}
+\label{figpredict}
+\end{figure}
+
+\section{Global and conditioned reliable roles}
+
+A globally reliable unit must satisfy the standard confound controls and must also agree with independently induced clusters in at least two of the four cluster resolutions. Under this policy, the global catalog contains 23 globally reliable role units. The global catalog covers 769 unique token occurrences, or 10.8 percent of the S1 plus S2 core. It appears in 509 lines, or 29.8 percent of the core. This is high precision global coverage rather than full annotation coverage.
+
+\input{tables/maximal_reliable_role_catalog.tex}
+
+The conditioned reliability stage adds conditioned reliable units. These are not globally portable claims. They are stable only inside a stated manuscript environment, mostly Currier class, and are reported separately so that reliable local structure is not missed.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Conditioned reliable units}
+\label{tabconditioned}
+\resizebox{\linewidth}{!}{\input{tables/conditioned_reliable_catalog.tex}}
+\end{table}
+
+\section{Environment sensitive expansion}
+
+The environment sensitive expansion responds to a stricter version of the role question. Global portability is sufficient evidence, but it is not necessary evidence. Some role units may be real while being concentrated in one textual environment. It therefore adds environment sensitive reliable units when three conditions hold. The unit must have high role purity, enough occurrence and line support, and independent induction support from morphology and context features. Metadata concentration is allowed, but only because the unit is reported as environment sensitive rather than globally portable.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Environment sensitive reliable units}
+\label{tabenvsensitive}
+\resizebox{\linewidth}{!}{\input{tables/environment_sensitive_reliable_catalog.tex}}
+\end{table}
+
+
+The added environment sensitive layer contributes 310 new token occurrences and 257 lines before overlap. Together, the global reliable, conditioned reliable, and environment sensitive reliable tiers cover 1,759 token occurrences, or 24.8 percent of the core. They touch 759 lines, or 44.4 percent of the core.
+
+\section{Tokenization robustness and final coverage}
+
+Visible space tokenization is a defensible starting point, but it is not treated as final. The tokenization robustness stage tests whether candidate role units remain supported when the unit boundary is varied. The tested variants include surface tokens, conservative morphology units, broad shape units, Stolfi inspired signatures, frame and terminal units, token edge signatures, and left or right boundary merge signatures. The boundary merge checks ask whether a role signal depends on treating the visible space on either side of the unit as fixed.
+
+A tokenization robust unit is promoted only if it keeps high role purity, has independent induction support, and has tokenization support from at least two unitization variants. This rule lets coverage rise, but it blocks candidates that look good only under one segmentation assumption.
+
+\begin{table}[H]
+\centering
+\caption{Tokenization robustness summary}
+\label{tabtoksummary}
+\input{tables/tokenization_robustness_summary.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/tokenization_support.png}
+\caption{Candidate units with both induction and tokenization support}
+\label{figtokensupport}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Tokenization robust reliable units}
+\label{tabtokcat}
+\resizebox{\linewidth}{!}{\input{tables/tokenization_robust_reliable_catalog.tex}}
+\end{table}
+
+The tokenization robust layer adds 144 new promoted token occurrences and 133 lines before overlap. The full promoted layer now covers 1,903 token occurrences, or 26.8 percent of the core. It touches 812 lines, or 47.5 percent of the core. The good but not reliable enough tier adds 272 further occurrences for descriptive coverage only. With that tier included, the descriptive layer covers 2,175 token occurrences and touches 858 lines.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Coverage by reliability tier}
+\label{tabcoverage}
+\resizebox{\linewidth}{!}{\input{tables/coverage_summary.tex}}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\linewidth]{figures/cumulative_coverage.png}
+\caption{Cumulative coverage after adding each reliability tier}
+\label{figcoverage}
+\end{figure}
+
+The next tier is good but not reliable enough. These units are retained so that plausible role behavior is not lost, but they are not used as promoted evidence. The common reasons for non promotion are low induction support, low tokenization support, lower role purity, or too little evidence.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Largest good but not reliable enough units}
+\label{tabgood}
+\resizebox{\linewidth}{!}{\input{tables/good_not_reliable_excerpt.tex}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Role coverage across reliability tiers}
+\label{tabrolecoverage}
+\resizebox{\linewidth}{!}{\input{tables/role_coverage_summary.tex}}
+\end{table}
+
+\section{Section level roles and role switching}
+
+The paper also reports section level role profiles. The purpose is to avoid an over uniform claim. A unit may be portable while the manuscript still has section level differences. Table~\ref{tabsection} and Figure~\ref{figsection} show that dominant role mixtures differ by section code. This supports the use of section as a control and also provides a descriptive layer for future grammar work.
+
+\begin{table}[H]
+\centering
+\caption{Section level role profiles}
+\label{tabsection}
+\input{tables/section_profiles.tex}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/section_role_profiles.png}
+\caption{Top role shares by section code}
+\label{figsection}
+\end{figure}
+
+A role switching check tests whether the same unit receives different reliable roles in different local scopes. The method allows such cases. Under the current promotion rules, no high confidence role switching case is found. This is a negative result rather than a rule of the system.
+
+\begin{table}[H]
+\centering
+\caption{Role switching audit}
+\label{tabroleswitch}
+\input{tables/role_switch_audit.tex}
+\end{table}
+
+\section{Future hypotheses}
+
+The stable role units may later support stronger hypotheses. Some roles may turn out to be operator like, terminal like, quantifier like, or procedure like. The present paper does not assert those interpretations. Table~\ref{tabhypotheses} states them as future tests whose validity is independent of the present result.
+
+\begin{table}[H]
+\centering
+\caption{Future hypotheses outside the current claim}
+\label{tabhypotheses}
+\resizebox{\linewidth}{!}{\input{tables/hypotheses_future.tex}}
+\end{table}
+
+This separation matters. If every future hypothesis in Table~\ref{tabhypotheses} fails, the present result can still stand. It would still show that some internal role units are stable under the stated controls. If some future hypotheses succeed, the role layer can become the foundation for a separate formal grammar paper.
+
+\section{Limitations}
+
+The main limitation is that the role labels come from an upstream internal annotation layer. Independent clustering and held out prediction reduce this dependence, but they do not fully replace the upstream layer with a new raw manuscript role induction system.
+
+A second limitation is that the morphology layer is operational. It is based on known word structure ideas, but it is not a complete historical morphology. A third limitation is that conditioned reliable units and environment sensitive reliable units are not globally portable and should not be cited as global role evidence. A fourth limitation is that transcription tier robustness is not the same as a full leave one witness out test, because the available project table records support tiers rather than all individual witness strings. A fifth limitation is that held out tests are smaller than the full corpus and therefore conservative frequency thresholds can remove otherwise role consistent units.
+
+These limitations define the claim. The paper establishes a role stability layer that can be independently rerun and challenged. It does not establish formal grammar or semantics.
+
+\section{Conclusion}
+
+This paper provides a morphology aware and multi transcription controlled account of internal role stability in Voynichese. The strongest result is a reliable catalog of role units that survives combined controls, threshold checks, ablations, random role baselines, held out validation, transcription tier checks, section profiling, independent cluster induction, held out predictive validation, and tokenization robustness checks. The tokenization robustness stage expands coverage by promoting only the additional units that survive alternate unit boundary checks.
+
+The result is intentionally limited. It is not a decipherment. It does not identify a language, a lexicon, parts of speech, phonetic values, formal grammar, or semantics. Its contribution is the reproducible role layer that must come before those stronger claims.
+
+\section*{Acknowledgments}
+
+AI tools were used for drafting support, code organization, LaTeX packaging, and exploratory analysis assistance. The author reviewed and finalized the methods, wording, reported results, code release, and interpretation.
+
+\input{references_manual.tex}
+
+\end{document}
