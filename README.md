@@ -1,4 +1,4 @@
-This repository contains the code, derived data, and paper source for the paper 'Internal Role Stability in Voynichese: Morphological Foundations and Multi-Transcription Controls.' The project studies internally stable role units in Voynichese. It does not propose a decipherment or translation.
+This repository contains the code, derived data, and paper source for “Internal Role Stability in Voynichese: Morphological Foundations and Multi-Transcription Controls.” The project studies recurring internal role patterns in Voynichese using morphology-aware grouping, multi-transcription support, tokenization robustness checks, and manuscript metadata controls. It does not propose a decipherment or translation.
 
 # Internal Role Stability in Voynichese
 
@@ -10,7 +10,7 @@ Repository: <https://github.com/ahaankallat/voynich-role-stability>
 
 This project studies whether written units in Voynichese keep stable internal roles after morphology-aware grouping, multiple transcription support, controls for manuscript metadata, independent induction checks, and tokenization robustness tests.
 
-The promoted reliable role layer covers 1,903 of 7,107 token occurrences, or 26.78 percent of the analyzed core. It appears in 812 of 1,709 lines, or 47.51 percent of analyzed lines. A descriptive "good but not reliable enough" tier is retained for transparency and future work, but it is not treated as promoted evidence.
+The final promoted reliable layer covers 1,903 of 7,107 token occurrences, or 26.8 percent of the analyzed core, and appears in 812 of 1,709 lines, or 47.5 percent of analyzed lines. A broader descriptive layer covers 2,175 token occurrences and 858 lines. The descriptive "good but not reliable enough" tier is retained for transparency and future work, but it is not treated as promoted evidence.
 
 ## Claims
 
@@ -20,7 +20,7 @@ The project does not claim decipherment, plaintext recovery, lexical translation
 
 ## Repository Structure
 
-- `paper/`: LaTeX paper source, BibTeX references, generated tables, and generated figures.
+- `paper/`: LaTeX paper source, references, generated tables, and generated figures.
 - `scripts/`: Reproducible analysis and table/figure generation scripts.
 - `src/voynich_audit/`: Minimal Python package namespace for the project.
 - `data/processed/`: Derived tables used by the analysis and paper.
@@ -59,7 +59,7 @@ From the repository root:
 make paper
 ```
 
-The paper compiles from `paper/main.tex` using `paper/references.bib`, `paper/tables/`, and `paper/figures/`.
+The paper compiles from `paper/main.tex` using `paper/references_manual.tex`, `paper/tables/`, and `paper/figures/`.
 
 ## Validate Checksums
 

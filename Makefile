@@ -12,7 +12,7 @@ tables:
 	python3 scripts/make_tables_figures_pass31.py
 
 paper:
-	cd paper && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+	cd paper && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
 
 checksums:
 	python3 scripts/validate_checksums.py
